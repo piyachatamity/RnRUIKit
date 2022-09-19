@@ -10,6 +10,12 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/media" />
+            <option value="$PROJECT_DIR$/recognition" />
+            <option value="$PROJECT_DIR$/reward" />
+            <option value="$PROJECT_DIR$/rnr" />
+            <option value="$PROJECT_DIR$/rnrsdk" />
           </set>
         </option>
       </GradleProjectSettings>

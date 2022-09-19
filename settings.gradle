@@ -14,3 +14,9 @@ dependencyResolutionManagement {
 }
 rootProject.name = "RnRUIkit"
 include ':app'
+include ':common'
+include ':media'
+include ':recognition'
+include ':reward'
+include ':rnr'
+include ':rnrsdk'
