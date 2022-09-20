@@ -4,19 +4,25 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.amityeko.recognition.ui.home.view.RecognitionHomeDialogFragment
 import com.amityeko.rnr.main.RewardAndRecognition
+import com.amityeko.rnruikit.databinding.ActivityMainBinding
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+//        setContentView(R.layout.activity_main)
+
 
         if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
 
-        val button = findViewById<Button>(R.id.btn)
-        button.setOnClickListener {
+        binding.btn.setOnClickListener {
             openRnR()
         }
 
@@ -26,6 +32,7 @@ class MainActivity : AppCompatActivity() {
     private fun openRnR() {
 //        val intent = Intent(this, RnRMenuActivity::class.java)
 //        startActivity(intent)
+        openDialogCreateRecognition()
     }
 
     private fun registerDevice() {
@@ -49,5 +56,13 @@ class MainActivity : AppCompatActivity() {
 //                    setupEventRnR()
 //                }
             }
+    }
+
+    private fun openDialogCreateRecognition() {
+        val fragment = RecognitionHomeDialogFragment.newInstance()
+        fragment.show(
+            supportFragmentManager,
+            RecognitionHomeDialogFragment.TAG
+        )
     }
 }
