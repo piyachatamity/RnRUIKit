@@ -1,38 +1,53 @@
 package com.amityeko.rnruikit
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.amityeko.common.CommonModule
-import com.amityeko.media.MediaModule
-import com.amityeko.recognition.RecognitionModule
-import com.amityeko.reward.RewardModule
-import com.amityeko.rnr.RnRModule
-import com.amityeko.rnr.ui.RnRMenuActivity
-import com.amityeko.rnrsdk.RnRSdkModule
+import com.amityeko.rnr.main.RewardAndRecognition
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        CommonModule().getMessage()
-        MediaModule().getMessage()
-        RecognitionModule().getMessage()
-        RewardModule().getMessage()
-        RnRModule().getMessage()
-        RnRSdkModule().getMessage()
+        if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
 
         val button = findViewById<Button>(R.id.btn)
         button.setOnClickListener {
             openRnR()
         }
+
+        registerDevice()
     }
 
     private fun openRnR() {
-        val intent = Intent(this, RnRMenuActivity::class.java)
-        startActivity(intent)
+//        val intent = Intent(this, RnRMenuActivity::class.java)
+//        startActivity(intent)
+    }
+
+    private fun registerDevice() {
+        val apiKey = "ffe5bd3b1cb3128fc9e185f0057c33856f5dc665d4a71ae1fc653d3fe69501344ea3a82dc84344cf" // DEV
+//        val apiKey = "a5f644dd5f6faa78c12a6347748f145d090e83e4a1c6de939be9eb283ad51a1caca27ae53a35c3fe" // STG
+        RewardAndRecognition.registerDevice(this, apiKey, "132", "aaa")
+            .observeOn(AndroidSchedulers.mainThread())
+            .onErrorReturn {
+                Timber.e("Register device error: ${it.message}")
+                Toast.makeText(this, "Register device error: ${it.message}", Toast.LENGTH_SHORT).show()
+                false
+            }
+            .doOnNext {
+                Timber.d("register finish with result: $it")
+            }
+            .subscribe{
+                Timber.d("register result $it")
+                Toast.makeText(this, "register result $it", Toast.LENGTH_SHORT).show()
+
+//                if (it) {
+//                    setupEventRnR()
+//                }
+            }
     }
 }

@@ -48,7 +48,7 @@ afterEvaluate {
 
                 groupId = 'com.github.piyachatamity'
                 artifactId = 'recognition'
-                version = '0.0.0-alpha02'
+                version = '0.0.0-alpha03'
             }
         }
     }

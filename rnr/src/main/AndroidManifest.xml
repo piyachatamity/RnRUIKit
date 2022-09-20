@@ -3,9 +3,6 @@
     package="com.amityeko.rnr">
 
     <application>
-        <activity
-            android:name=".ui.RnRMenuActivity"
-            android:exported="false" />
     </application>
 
 </manifest>
