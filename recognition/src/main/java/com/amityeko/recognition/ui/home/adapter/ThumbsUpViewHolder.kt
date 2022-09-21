@@ -6,9 +6,18 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
 import com.amityeko.common.base.BaseViewHolder
+import com.amityeko.common.theme.AmityEkoTheme
 import com.amityeko.recognition.R
+import com.amityeko.recognition.databinding.LayoutBadgeListItemBinding
 import com.amityeko.recognition.ui.home.callback.IThumbsUpListListener
+import com.amityeko.rnrsdk.auth.usecase.RnRGetAccessTokenStoreUseCase
 import com.amityeko.rnrsdk.badge.api.entity.RnRBadgeEntity
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.model.GlideUrl
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
 import timber.log.Timber
 
 class ThumbsUpViewHolder(
@@ -33,13 +42,14 @@ class ThumbsUpViewHolder(
         listener.selectedItem().observe(itemView.context as LifecycleOwner) {
             if (it.id == item.id) {
                 bgDrawable.setStroke(
-                    context.resources.getDimension(R.dimen.thumbs_up_border_selected).toInt(),
+                    context.resources.getDimension(com.amityeko.common.R.dimen.thumbs_up_border_selected).toInt(),
                     AmityEkoTheme.colorPrimary
                 )
             } else {
+
                 bgDrawable.setStroke(
-                    context.resources.getDimension(R.dimen.thumbs_up_border_default).toInt(),
-                    ContextCompat.getColor(itemView.context, R.color.neutral_gray_8)
+                    context.resources.getDimension(com.amityeko.common.R.dimen.thumbs_up_border_default).toInt(),
+                    ContextCompat.getColor(itemView.context, com.amityeko.common.R.color.neutral_gray_8)
                 )
             }
         }

@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.amityeko.recognition.ui.home.view.RecognitionHomeFragment
+import com.amityeko.recognition.ui.home.view.ThumbsUpListFragment
 import com.amityeko.rnrsdk.category.api.entity.RnRCategoryEntity
 
 class RecognitionHomeViewPagerAdapter(

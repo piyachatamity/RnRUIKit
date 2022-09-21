@@ -9,10 +9,13 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.GridLayoutManager
 import com.amityeko.common.base.BaseFragment
+import com.amityeko.common.state.UIViewStage
 import com.amityeko.recognition.R
 import com.amityeko.recognition.databinding.FragmentThumbsUpListBinding
+import com.amityeko.recognition.ui.home.adapter.ThumbsUpListAdapter
 import com.amityeko.recognition.ui.home.callback.IDialogHomeListener
 import com.amityeko.recognition.ui.home.callback.IThumbsUpListListener
+import com.amityeko.recognition.ui.home.viewmodel.ThumbsUpListViewModel
 import com.amityeko.rnrsdk.badge.api.entity.RnRBadgeEntity
 import com.amityeko.rnrsdk.category.api.entity.RnRCategoryEntity
 import timber.log.Timber

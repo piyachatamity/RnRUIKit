@@ -1,9 +1,11 @@
 package com.amityeko.rnruikit
 
 import android.os.Bundle
+import android.util.TypedValue
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.amityeko.common.theme.AmityEkoTheme
 import com.amityeko.recognition.ui.home.view.RecognitionHomeDialogFragment
 import com.amityeko.rnr.main.RewardAndRecognition
 import com.amityeko.rnruikit.databinding.ActivityMainBinding
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
 
+        setupRnR()
         binding.btn.setOnClickListener {
             openRnR()
         }
@@ -64,5 +67,15 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager,
             RecognitionHomeDialogFragment.TAG
         )
+    }
+
+    private fun setupRnR() {
+        AmityEkoTheme.setup(getPrimaryColor())
+    }
+
+    private fun getPrimaryColor(): Int {
+        val value = TypedValue()
+        theme.resolveAttribute(R.color.teal_700, value, true)
+        return value.data
     }
 }

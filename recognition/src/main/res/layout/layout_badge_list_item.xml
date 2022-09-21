@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/eight">
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_thumbs_up_list_item"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/thirty_eight"
+        android:paddingTop="@dimen/twelve"
+        android:paddingEnd="@dimen/thirty_eight"
+        android:paddingBottom="@dimen/twelve">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/eighty"
+            android:layout_height="@dimen/eighty"
+            tools:src="@drawable/ic_no_thumbs_up" />
+
+        <com.amityeko.rnr.common.components.text.AmityEkoTextView
+            android:id="@+id/category_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/eight"
+            tools:text="Creative" />
+
+        <com.amityeko.rnr.common.components.text.AmityEkoTextView
+            android:id="@+id/point_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/eight"
+            android:background="@drawable/bg_badge_point"
+            android:drawableStart="@drawable/ic_point"
+            android:paddingTop="@dimen/four"
+            android:paddingBottom="@dimen/four"
+            android:paddingStart="@dimen/eight"
+            android:paddingEnd="@dimen/twelve"
+            android:textSize="@dimen/text_size_regular"
+            tools:text="40" />
+    </LinearLayout>
+
+</LinearLayout>
