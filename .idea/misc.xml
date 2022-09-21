@@ -4,9 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="common/src/main/res/drawable/bg_rounded_corner_bottom_sheet_dialog.xml" value="0.127" />
+        <entry key="common/src/main/res/drawable/ic_bottom_sheet_top.xml" value="0.127" />
+        <entry key="recognition/src/main/res/drawable/bg_default_button.xml" value="0.127" />
+        <entry key="recognition/src/main/res/drawable/bg_send.xml" value="0.127" />
+        <entry key="recognition/src/main/res/drawable/ic_continue_arrow.xml" value="0.127" />
+        <entry key="recognition/src/main/res/drawable/ic_no_thumbs_up.xml" value="0.127" />
+        <entry key="recognition/src/main/res/drawable/loading_badge_skeleton.xml" value="0.127" />
         <entry key="recognition/src/main/res/layout/activity_recognition_page.xml" value="0.18" />
         <entry key="recognition/src/main/res/layout/fragment_recognition_home.xml" value="0.25" />
         <entry key="recognition/src/main/res/layout/fragment_recognition_home_dialog.xml" value="0.15081521739130435" />
+        <entry key="recognition/src/main/res/layout/fragment_thumbs_up_list.xml" value="0.15081521739130435" />
+        <entry key="recognition/src/main/res/layout/test_layout.xml" value="0.15081521739130435" />
         <entry key="rnr/src/main/res/layout/activity_rn_rmenu.xml" value="0.1403985507246377" />
       </map>
     </option>

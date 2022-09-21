@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="neutral_gray_9">#F5F5F5</color>
+    <string-array name="send_recognition_text_color">
+        <item>#FFFFFF</item>
+        <item>#000000</item>
+        <item>#9E9E9E</item>
+        <item>#005D5D</item>
+        <item>#00539A</item>
+        <item>#6929C4</item>
+        <item>#9F1853</item>
+        <item>#AC5700</item>
+    </string-array>
+
+</resources>

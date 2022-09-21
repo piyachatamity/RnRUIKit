@@ -1,17 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context=".ui.home.view.RecognitionHomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:padding="30sp"/>
+    <ImageView
+        android:id="@+id/imgTopActionSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_bottom_sheet_top"/>
 
-</FrameLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgTopActionSheet"
+        app:tabMode="scrollable" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_below="@id/tabs" />
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_pager"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_default_button"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:gravity="center"
+        app:icon="@drawable/ic_continue_arrow"
+        app:iconGravity="textEnd"
+        android:text="@string/general_continue"
+        android:textColor="@android:color/white" />
+
+    <LinearLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_below="@id/tabs"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_no_thumbs_up" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:text="@string/no_badges_here"
+            android:textSize="16sp"
+            android:textColor="@color/neutral_gray_1"
+            android:lineSpacingExtra="5sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/badges_will_be_available_soon"
+            android:textSize="14sp"
+            android:textColor="@color/neutral_gray_3"
+            android:lineSpacingExtra="4sp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

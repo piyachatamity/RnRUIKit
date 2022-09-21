@@ -28,9 +28,9 @@ class RecognitionHomeDialogFragment : BottomSheetDialogFragment() {
             addSelectCateAndBadgeFragment()
     }
 
-//    override fun getTheme(): Int {
-//        return com.amityeko.media.R.style.AppBottomSheetDialogTheme
-//    }
+    override fun getTheme(): Int {
+        return com.amityeko.common.R.style.AppBottomSheetDialogTheme
+    }
 
     private fun addChildFragment(
         containerId: Int,

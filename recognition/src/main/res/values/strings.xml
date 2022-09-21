@@ -1,4 +1,41 @@
 <resources>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="no_badges_here">No badges here</string>
+    <string name="badges_will_be_available_soon">Badges will be available soon!</string>
+    <string name="send_message_hint">Tap to celebrate your teammate!</string>
+    <string name="send_message_hint_on_focus">What did your teammate do to deserve a recognition?</string>
+    <string name="done">Done</string>
+    <string name="discard_changes_dialog_title">Discard changes?</string>
+    <string name="discard_changes_dialog_message">Changes you made so far will not be saved.</string>
+    <string name="discard">Discard</string>
+    <string name="cancel">Cancel</string>
+    <string name="recognition_sent">Recognition Sent</string>
+    <string name="preview">Preview</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recognition_preview_badge_info">%s %d point</string>
+    <string name="general_continue">Continue</string>
+    <string name="tool_tip_gif_message">Make your message more playful\nwith a GIF or image!</string>
+    <string name="add_title">Add Title…</string>
+    <string name="discard_video">Discard Video?</string>
+    <string name="discard_video_message">If you go back, you will lose any\nchanges you\'ve made</string>
+    <string name="need_camera_permission">Need Camera Permission</string>
+    <string name="tab_title_text">Text</string>
+    <string name="tab_title_video">Video</string>
+    <string name="audio">Audio</string>
+    <string name="text">Text</string>
+    <string name="video">Video</string>
+    <string name="achieved_badges">Achieved Badges</string>
+    <string name="total_points">Total Points</string>
+    <string name="view_all">View all</string>
+    <string name="achievement_count">Achievements (%d)</string>
+    <string name="num_items">%d items</string>
+    <string name="num_points">%d Points</string>
+    <string name="achievements">Achievements</string>
+    <string name="sent_on_date">Sent on %s</string>
+    <string name="audio_compose_info_text">Tell us what did your teammate do to deserve a recognition?</string>
+    <string name="press_to_record">Press to record</string>
+    <string name="remove_audio_dialog_title">Remove audio?</string>
+    <string name="remove_audio_dialog_message">Audio you made will be removed and you can record it again.</string>
+    <string name="remove">Remove</string>
+    <string name="go_back_audio_dialog_title">Discard audio?</string>
+    <string name="go_back_audio_dialog_message">If you go back, you will lose any changes you’ve made.</string>
 </resources>

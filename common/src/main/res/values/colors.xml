@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rnr_color_primary">#29A386</color>
+    <color name="rnr_color_notification">#E32B2B</color>
+    <color name="rnr_color_success">#48CC33</color>
+    <color name="rnr_color_caution">#FBA904</color>
+    <color name="rnr_color_error">#FB0404</color>
+    <color name="rnr_color_info">#0449FB</color>
+    <color name="rnr_color_pink">#FB0489</color>
+    <color name="rnr_color_orange">#FB6C04</color>
+    <color name="rnr_color_cyan">#0494FB</color>
+    <color name="rnr_color_teal">#33CCC7</color>
+    <color name="rnr_color_violet">#6604FB</color>
+
+    <color name="neutral_gray_1">#212121</color>
+    <color name="neutral_gray_2">#424242</color>
+    <color name="neutral_gray_5">#9E9E9E</color>
+    <color name="neutral_gray_6">#F5F5F5</color>
+    <color name="neutral_gray_8">#EEEEEE</color>
+
+    <color name="secondary_blue">#0F86FE</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>

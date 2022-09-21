@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="thumbs_up_grid_size">2</integer>
+    <integer name="achievement_summary_grid_size">3</integer>
+    <integer name="achievement_grid_size">2</integer>
+    <integer name="max_length_recognition_message">200</integer>
+</resources>
